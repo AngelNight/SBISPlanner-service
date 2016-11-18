@@ -10,3 +10,6 @@ if __name__ == '__main__':
 
     httpd = make_server('localhost', 80, wsgi_app)
     httpd.serve_forever()
+
+def sendMessage(msg, author_exists=True):
+   return True
