@@ -4,7 +4,7 @@ import time
 import telebot
 
 hostName = "localhost"
-hostPort = 8000
+hostPort = 80
 
 
 TOKEN = "277125289:AAEgpxzg5TXP81MXn-89pf2P8vXGlWtHVPQ"
