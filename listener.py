@@ -23,13 +23,13 @@ def request_pars(str):
         #bot.send_message(TOKEN, l[1], l[2])
     print(l)
     if l[1] == "new-task":
-            bot.send_message(221482003, "У вас новое задание" + "\n" + l[2])
+            bot.send_message(221482003, "У вас новое задание" + "\n" + l[2], )
     elif l[1] == "close-task":
             bot.send_message(221482003, "Вам нужно закрыть задачу" + "\n" + l[2])
     elif l[1] == "conference":
-            bot.send_message(221482003, "Вас приглошают на совещание")
+            bot.send_message(221482003, "Вас приглошают на совещание" + "\n" + l[2])
     elif l[1] == "colendar":
-            bot.send_message(221482003, "Ваше расписание составлено")
+            bot.send_message(221482003, "Ваше расписание составлено" + "\n" + l[2])
 
     return l
 
