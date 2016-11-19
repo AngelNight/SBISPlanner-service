@@ -585,7 +585,9 @@ class TeleBot:
         """
         Convenience function for `send_message(message.chat.id, text, reply_to_message_id=message.message_id, **kwargs)`
         """
+        print(message.chat.id)
         return self.send_message(message.chat.id, text, reply_to_message_id=message.message_id, **kwargs)
+
 
     def answer_inline_query(self, inline_query_id, results, cache_time=None, is_personal=None, next_offset=None,
                             switch_pm_text=None, switch_pm_parameter=None):
