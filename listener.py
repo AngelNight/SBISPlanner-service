@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import time
 import telebot
@@ -13,13 +14,23 @@ bot = telebot.TeleBot(TOKEN)
 def request_pars(str):
     #str.replace('/', '')
     #str[0] = ''
-    l = str.split('/')
+    str = str[1:]
+    l = str.split('%')
 
 
     #print(len(l))
-    if len(l) == 3 :
+
         #bot.send_message(TOKEN, l[1], l[2])
-        bot.send_message(l[1], l[2])
+    print(l)
+    if l[1] == "new-task":
+            bot.send_message(221482003, "У вас новое задание" + "\n" + l[2])
+    elif l[1] == "close-task":
+            bot.send_message(221482003, "Вам нужно закрыть задачу" + "\n" + l[2])
+    elif l[1] == "conference":
+            bot.send_message(221482003, "Вас приглошают на совещание")
+    elif l[1] == "colendar":
+            bot.send_message(221482003, "Ваше расписание составлено")
+
     return l
 
 class MyServer(BaseHTTPRequestHandler):
